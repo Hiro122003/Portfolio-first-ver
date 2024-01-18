@@ -9,5 +9,6 @@ export default function Spinner(){
     ariaLabel="Common Loader"
     borderColor="#000"
     barColor="#fff"
+    wrapperStyle={{display:'block',margin:"auto"}}
   />
 }
