@@ -1,4 +1,4 @@
-import { MenuItem } from "./types";
+import { FormControlItem, MenuItem, Option } from "./types";
 
 
 export const menuItems: MenuItem[] = [
@@ -23,3 +23,69 @@ export const menuItems: MenuItem[] = [
     path: "/search",
   },
 ];
+
+export const categories: Option[] = [
+  {
+    value: "application",
+    label: "Application",
+  },
+  {
+    value: "data",
+    label: "Data",
+  },
+  {
+    value: "software",
+    label: "Software",
+  },
+  {
+    value: "tech",
+    label: "Technology",
+  },
+  {
+    value: "science",
+    label: "Science",
+  },
+];
+
+export const formControls: FormControlItem[] = [
+  {
+    id: "title",
+    label: "Title",
+    placeholder: "Enter Blog Title",
+    type: "text",
+    component: "input",
+    options: [],
+  },
+  {
+    id: "description",
+    label: "Description",
+    placeholder: "Enter Blog Description",
+    type: "text",
+    component: "textarea",
+    options: [],
+  },
+  {
+    id: "category",
+    label: "Category",
+    placeholder: "Choose Blog Category",
+    type: "",
+    component: "select",
+    options: categories,
+  },
+];
+
+export const firebaseConfig = {
+  apiKey: "AIzaSyCwP8RrJzdyIR6CaueweLYVm8xvTboKy-o",
+  authDomain: "nextjs-blog-typescript-2024.firebaseapp.com",
+  projectId: "nextjs-blog-typescript-2024",
+  storageBucket: "nextjs-blog-typescript-2024.appspot.com",
+  messagingSenderId: "921229855471",
+  appId: "1:921229855471:web:ddf87a130525c9cec6691a"
+};
+
+export const initialBlogFormData = {
+ title :  '',
+ description : '',
+ image : '',
+ category : '' 
+}
