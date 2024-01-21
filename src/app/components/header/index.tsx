@@ -9,17 +9,18 @@ import { signIn, signOut, useSession } from 'next-auth/react';
 import { usePathname, useRouter } from 'next/navigation';
 import { MenuItem } from '@/app/utils/types';
 import { menuItems } from '@/app/utils';
+import { GlobalContentxt } from '@/context';
 // import { GlobalContext } from '@/context';
 
 export default function Header() {
   const [sticky, setSticky] = useState<boolean>(false);
   const [navbarOpen, setNavbarOpen] = useState<boolean>(false);
   const { data: session } = useSession();
-  // const { setSearchQuery, setSearchResults } = useContext(GlobalContext);
+  const { setSearchQuery, setSearchResults } = useContext(GlobalContentxt);
   const router = useRouter();
   const pathName = usePathname();
 
-  console.log(session, 'session');
+  // console.log(session, 'session');
 
   function handleStickyNavbar() {
     if (window.scrollY >= 80) setSticky(true);
@@ -37,10 +38,11 @@ export default function Header() {
   //   };
   // }, []);
 
-  // useEffect(() => {
-  //   setSearchResults([]);
-  //   setSearchQuery('');
-  // }, [pathName]);
+  useEffect(() => {
+    // console.log(pathName)
+    setSearchResults([]);
+    setSearchQuery('');
+  }, [pathName]);
 
   return (
     <div>
