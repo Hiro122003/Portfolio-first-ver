@@ -44,7 +44,7 @@ async function handleImageSaveToFireBase(file: any) {
   });
 }
 
-export const Create = () => {
+export default function Create () {
   const { formData, setFormData } = useContext(GlobalContentxt);
   const [imageLoading, setImageLoading] = useState<boolean>(false);
   const {data:session} = useSession()
@@ -214,4 +214,4 @@ export const Create = () => {
   );
 };
 
-export default Create;
+
