@@ -10,11 +10,11 @@ export default function Home() {
             <div className="w-full px-4">
               <div className="mx-auto max-w-[800px] text-center">
                 <h2 className="mb-10 text-3xl font-bold leading-tight text-black dark:text-white sm:text-3xl sm:leading-tight md:text-4xl md:leading-tight lg:text-5xl">
-                  Next.js Full-Stack Blog-application <br /> Website Using Prisma,Next-auth,Next-theme <br /> and firebase as Database.
+                  Next.js Full-Stack Blog-application <br /> Website Using TypeScript Prisma,Next-auth,Next-themes <br /> and firebase as Database.
                 </h2>
                 <h3 className="mb-12 text-base font-medium !leading-relaxed text-body-color dark:text-white dark:opacity-90 sm:text-lg md:text-xl">
                   Next.jsで作成したブログ投稿のアプリです。<br />
-                  prisma Next-auth Next-theme データベースはfirebaseを使用してます。
+                  TypeScript prisma Next-auth Next-themes データベースはfirebaseを使用してます。
                 </h3>
               </div>
               <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
