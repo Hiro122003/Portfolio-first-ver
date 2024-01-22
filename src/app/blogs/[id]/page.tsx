@@ -15,7 +15,9 @@ async function extractBlogDetails(id: string) {
       },
     }
   );
-
+  if (!res.ok) {
+    throw new Error(`Failed to fetch blog details: ${res.status}`);
+  }
   const data = await res.json();
 
   if (data.success) return data.data;
