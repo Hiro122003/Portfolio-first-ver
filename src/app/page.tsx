@@ -1,7 +1,37 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Home() {
   return (
-    <div>Homepage</div>
+    <>
+      <section className="relative z-10 overflow-hidden pt-[120px] pb-16 md:pt-[150px] md:pb-[120px] xl:pt-[180px] xl:pb-[160px] 2xl:pt-[210px] 2xl:pb-[200px]">
+        <div className="container">
+          <div className="-mx-4 flex flex-wrap">
+            <div className="w-full px-4">
+              <div className="mx-auto max-w-[800px] text-center">
+                <h2 className="mb-10 text-3xl font-bold leading-tight text-black dark:text-white sm:text-3xl sm:leading-tight md:text-4xl md:leading-tight lg:text-5xl">
+                  Next.js Full-Stack Blog-application <br /> Website Using Prisma,Next-auth,Next-theme <br /> and firebase as Database.
+                </h2>
+                <h3 className="mb-12 text-base font-medium !leading-relaxed text-body-color dark:text-white dark:opacity-90 sm:text-lg md:text-xl">
+                  Next.jsで作成したブログ投稿のアプリです。<br />
+                  prisma Next-auth Next-theme データベースはfirebaseを使用してます。
+                </h3>
+              </div>
+              <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                <Link
+                  className="rounded-md bg-primary py-4 px-8 text-base font-semibold text-white 
+                  hover:bg-primary/80"
+                  href={"/blogs"}
+                >
+                  ブログページ
+                  
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    </>
   )
 }
