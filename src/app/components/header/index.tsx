@@ -31,12 +31,12 @@ export default function Header() {
     setNavbarOpen(!navbarOpen);
   }
 
-  // useEffect(() => {
-  //   window.addEventListener('scroll', handleStickyNavbar);
-  //   return () => {
-  //     window.removeEventListener('scroll', handleStickyNavbar);
-  //   };
-  // }, []);
+  useEffect(() => {
+    window.addEventListener('scroll', handleStickyNavbar);
+    return () => {
+      window.removeEventListener('scroll', handleStickyNavbar);
+    };
+  }, []);
 
   useEffect(() => {
     // console.log(pathName)
@@ -68,7 +68,7 @@ export default function Header() {
               </Link>
             </div>
             <div className="flex w-full items-center justify-between px-4">
-              <div>
+              <div className=''>
                 <button
                   onClick={handleNavbarToggle}
                   id="navbarToggler"
