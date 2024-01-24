@@ -5,9 +5,9 @@ interface Param {
 }
 
 async function extractBlogDetails(id: string) {
-  // console.log(id, 'api id');
+  // console.log(id, 'api id atPage.tsx');
   const res = await fetch(
-    `${process.env.URL}/api/blog-post/blog-details?blogID=${id}`,
+    `${process.env.URL}/api/blog-post/blog-details/${id}`,
     {
       method: 'GET',
       // next: {
@@ -16,16 +16,21 @@ async function extractBlogDetails(id: string) {
       cache:"no-store"
     }
   );
-  // if (!res.ok) {
-  //   throw new Error(`Failed to fetch blog details: ${res.status}`);
-  // }
+  if (!res.ok) {
+    console.error(`API request failed with status ${res.status}`);
+    return;
+  }
   const data = await res.json();
+  console.log(data,"api response at Page.tsx")
+ 
 
   if (data.success) return data.data;
 }
 
 export default async function BlogDetails({ params }: { params: Param }) {
   const { id } = params;
+  // console.log(id,"params")
+  
 
   const blogData = await extractBlogDetails(id);
 

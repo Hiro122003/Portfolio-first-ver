@@ -1,14 +1,15 @@
 import prisma from "@/database";
+// import { NextApiRequest, NextApiResponse } from "next";
+
 import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(req: NextRequest) {
   try {
-    const url = new URL(req.url);
-    const blogID = url.searchParams.get("blogID");
-
+    // console.log(req.url)
+    const id = req.url.split("/blog-details/")[1]
     const blogDetails = await prisma.post.findUnique({
       where: {
-        id: Number(blogID),
+        id: Number(id),
       },
     });
 
@@ -32,3 +33,4 @@ export async function GET(req: NextRequest) {
     });
   }
 }
+
