@@ -3,7 +3,7 @@ import CategoryList from "@/app/components/category";
 
 async function getAllListsByCategory(getId: string) {
   // console.log(getId,"getID")
-  const res = await fetch(`${process.env.URL}/api/category?categoryID=${getId}`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/category?categoryID=${getId}`, {
     method: "GET",
     cache: "no-store",
   });
