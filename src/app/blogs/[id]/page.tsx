@@ -10,14 +10,15 @@ async function extractBlogDetails(id: string) {
     `${process.env.URL}/api/blog-post/blog-details?blogID=${id}`,
     {
       method: 'GET',
-      next: {
-        revalidate: 0,
-      },
+      // next: {
+      //   revalidate: 0,
+      // },
+      cache:"no-store"
     }
   );
-  if (!res.ok) {
-    throw new Error(`Failed to fetch blog details: ${res.status}`);
-  }
+  // if (!res.ok) {
+  //   throw new Error(`Failed to fetch blog details: ${res.status}`);
+  // }
   const data = await res.json();
 
   if (data.success) return data.data;
