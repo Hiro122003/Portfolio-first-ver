@@ -21,7 +21,11 @@ export default function BlogList({ lists }: { lists: Blog[] }) {
     // console.log(id,"deleteId")
     const res = await fetch(`/api/blog-post/delete-post/${id}`, {
       method: 'DELETE',
-      cache: 'no-store',
+      // cache: 'no-store',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ id }),
     });
 
     const data = await res.json();
