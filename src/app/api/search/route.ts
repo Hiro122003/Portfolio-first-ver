@@ -5,7 +5,7 @@ export async function GET(req: NextRequest) {
   try {
     const url = new URL(req.url);
     const extractQuery = url.searchParams.get('query');
-    // console.log(extractQuery);
+    // console.log(extractQuery);??
     
 
     const searchPostList = await prisma.post.findMany({
