@@ -3,11 +3,13 @@ import { NextRequest, NextResponse } from 'next/server';
 
 export async function DELETE(req: NextRequest) {
   try {
-    const url = new URL(req.url);
-    const extractIdOfBlogItemToBeDeleted = url.searchParams.get('id');
+    // const url = new URL(req.url);
+    // const extractIdOfBlogItemToBeDeleted = url.searchParams.get('id');
+    const {id} = await req.json()
+    // console.log(id)
 
     const deletedBlogPost = await prisma.post.delete({
-      where: { id: Number(extractIdOfBlogItemToBeDeleted) },
+      where: { id: Number(id) },
     });
 
     if (deletedBlogPost) {

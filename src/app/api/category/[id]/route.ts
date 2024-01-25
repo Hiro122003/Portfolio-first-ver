@@ -3,8 +3,9 @@ import { NextRequest, NextResponse } from 'next/server';
 
 export async function GET(req: NextRequest) {
   try {
-    const { searchParams } = new URL(req.url);
-    const extractCategoryID = searchParams.get('categoryID');
+    // const { searchParams } = new URL(req.url);
+    // const extractCategoryID = searchParams.get('categoryID');
+    const extractCategoryID = req.url.split('/category/')[1]
 
     const getBlogPostListBasedOnCurrenrCategoryID = await prisma.post.findMany({
       where: {
