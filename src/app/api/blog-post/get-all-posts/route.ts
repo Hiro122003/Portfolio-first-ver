@@ -4,6 +4,7 @@ import { NextRequest, NextResponse } from 'next/server';
 export async function GET(reqest: NextRequest) {
   try {
     const getAllBlogPosts = await prisma.post.findMany();
+    console.log(getAllBlogPosts)
     if (getAllBlogPosts && getAllBlogPosts.length) {
       return NextResponse.json({
         success: true,

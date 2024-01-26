@@ -17,8 +17,8 @@ export async function POST(req: NextRequest) {
       });
     } else {
       return NextResponse.json({
-        success: true,
-        message: 'New Blog post added successfully',
+        success: false,
+        message: 'New Blog failed to add',
       });
     }
   } catch (e) {

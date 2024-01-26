@@ -3,7 +3,7 @@
 import BlogList from "../components/blogs/blog-list";
 
 async function extractAllBlogs() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/blog-post/get-all-posts`, {
+  const res = await fetch(`https://fullstack-blog-app-one.vercel.app/api/blog-post/get-all-posts`, {
     method: "GET",
     cache: "no-store",
   });

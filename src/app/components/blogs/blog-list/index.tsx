@@ -9,13 +9,13 @@ import { useEffect } from 'react';
 export default function BlogList({ lists }: { lists: Blog[] }) {
   const router = useRouter();
 
-  useEffect(() => {
-    router.refresh();
-  });
-
   // useEffect(() => {
   //   router.refresh();
-  // }, []);
+  // });
+
+  useEffect(() => {
+    router.refresh();
+  }, []);
 
   async function handleDelete(id: number) {
     // console.log(id,"deleteId")
