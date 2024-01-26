@@ -8,7 +8,7 @@ export async function POST(req: NextRequest) {
       data: extractPostData,
     });
 
-    console.log(extractPostData, 'extractPostData');
+    // console.log(extractPostData, 'extractPostData');
 
     if (newlyCreatePost) {
       return NextResponse.json({
