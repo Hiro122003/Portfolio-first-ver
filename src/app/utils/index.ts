@@ -10,7 +10,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "category",
     label: "Category",
-    path: "/category/application",
+    path: "/category/technology",
   },
   {
     id: "blogs",

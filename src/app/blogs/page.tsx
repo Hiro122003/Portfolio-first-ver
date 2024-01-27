@@ -10,12 +10,12 @@ async function extractAllBlogs() {
   });
 
   const data = await res.json();
-  console.log(data)
+  // console.log(data)
 
   if (data.success) return data.data;
 }
 
-console.log(process.env.NEXTAUTH_URL)
+// console.log(process.env.NEXTAUTH_URL)
 
 export default async function Blogs() {
   const blogPostsList = await extractAllBlogs();

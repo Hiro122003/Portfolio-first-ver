@@ -21,7 +21,7 @@ export default function Search() {
 
     const data = await res.json();
 
-    console.log(data, 'searchdata');
+    // console.log(data, 'searchdata');
 
     if (data.success) {
       setSearchResults(data.data);

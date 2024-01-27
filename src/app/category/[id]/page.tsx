@@ -17,6 +17,7 @@ async function getAllListsByCategory(getId: string) {
 
 export default async function Category({ params }: { params: any }) {
   const { id } = params;
+  // console.log(id,"categoryID")//application
 
   const getAllList = await getAllListsByCategory(id);
 

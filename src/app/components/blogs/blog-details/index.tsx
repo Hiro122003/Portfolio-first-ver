@@ -9,7 +9,7 @@ import Button from '../../button';
 import { useState } from 'react';
 
 export default function BlogDetailHome({ blogData }: { blogData: Blog }) {
-  console.log(blogData, 'blog');
+  // console.log(blogData, 'blog');
 
   const { data: session } = useSession();
   const [comment, setComment] = useState<string>('');
