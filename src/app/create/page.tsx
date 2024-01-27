@@ -44,6 +44,7 @@ async function handleImageSaveToFireBase(file: any) {
   });
 }
 
+
 export default function Create () {
   const { formData, setFormData } = useContext(GlobalContentxt);
   const [imageLoading, setImageLoading] = useState<boolean>(false);
