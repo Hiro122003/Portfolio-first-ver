@@ -51,7 +51,7 @@ export default function Create () {
 
   const router = useRouter()
 
-  console.log(session?.user,"session")
+  // console.log(session?.user,"session")
 
   async function handleBlogImageChange(
     event: React.ChangeEvent<HTMLInputElement>
